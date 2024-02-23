@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "about",
+    "proyects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "description": "Hi, I'm Esteban Pelutiero. A passionate Front-end Developer based in Buenos Aires, Argentina",
+    "btn": "contact",
+    "tech": "tech stack"
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "A dedicated Front-end Developer based in Buenos Aires, Argentina",
+    "description": "As a Junior Front-End Developer, I possess an impressive arsenal of skills in HTML, CSS, JavaScript, React, and Tailwind. I excel in designing and maintaining responsive websites that offer a smooth user experience. My expertise lies in crafting dynamic, engaging interfaces through writing clean and optimized code and utilizing cutting-edge development tools and techniques. I am also a team player who thrives in collaborating with cross-functional teams to produce outstanding web applications."
+  },
+  "works": {
+    "subtitle": "Each project is a unique piece of development",
+    "textWork1": "The design phase focuses on simplicity, employing a clean color palette and intuitive navigation. Imagery, carefully selected to resonate with cleanliness and professionalism, plays a pivotal role. A responsive layout ensures a seamless user experience across various devices.",
+    "textWork2": "Designing a sleek landing page for a modern digital agency. Emphasizing contemporary aesthetics, it showcases innovation through engaging visuals and intuitive navigation, communicating professionalism and expertise.",
+    "btnGit": "Code",
+    "btnVisit": "Visit"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Don't be shy, hit me up!",
+    "location": "Location",
+    "copy": "All rights are reserved"
+  }
+}

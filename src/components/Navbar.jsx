@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { Collapse, Typography, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useLanguage } from '../LanguageContext';
+import Switcher from "./Switcher";
 
 const WINDOW_INNERWIDTH = window.innerWidth;
 
@@ -25,6 +27,7 @@ const Navbar = () => {
 
   return (
     <div className="z-50 fixed top-0 w-full bg-white/5 backdrop-blur-lg">
+      
       <nav className="mx-auto max-w-[1050px] shadow-none px-4 md:px-8 py-0 lg:px-0 border-none">
         <div className="flex items-center justify-between my-4">
           <Typography
@@ -86,6 +89,11 @@ const Navbar = () => {
 };
 
 const NavList = ({ closeMenu }) => {
+
+  const { toggleLanguage, language } = useLanguage();
+
+  const { translations } = useLanguage();
+
   const handleClose = () => {
     closeMenu();
   };
@@ -107,7 +115,7 @@ const NavList = ({ closeMenu }) => {
             onClick={handleClose}
             className="cursor-pointer flex items-center font-poppins text-white font-semibold text-base transition-colors"
           >
-            Home
+            {translations.nav.home}
           </Link>
         </Typography>
 
@@ -126,7 +134,7 @@ const NavList = ({ closeMenu }) => {
             delay={0}
             className="cursor-pointer flex items-center font-poppins text-white font-semibold text-base transition-colors"
           >
-            About
+            {translations.nav.about}
           </Link>
         </Typography>
 
@@ -145,7 +153,7 @@ const NavList = ({ closeMenu }) => {
             delay={0}
             className="cursor-pointer flex items-center font-poppins text-white font-semibold text-base transition-colors"
           >
-            Projects
+            {translations.nav.proyects}
           </Link>
         </Typography>
 
@@ -154,7 +162,7 @@ const NavList = ({ closeMenu }) => {
         <Typography
           as="li"
           variant="small"
-          className="flex justify-end lg:pl-4 lg:py-3 pt-3 pb-4"
+          className="flex justify-end lg:pl-4 lg:py-3 pt-3 pb-4 border-b-[1px] border-white/50 lg:border-none"
         >
           <Link
             smooth={true}
@@ -164,9 +172,17 @@ const NavList = ({ closeMenu }) => {
             delay={0}
             className="cursor-pointer flex items-center font-poppins text-white font-semibold text-base transition-colors"
           >
-            Contact
+            {translations.nav.contact}
           </Link>
         </Typography>
+        <Typography
+          as="li"
+          variant="small"
+          className="flex justify-end lg:pl-4 lg:py-3 pt-3 pb-4"
+        >
+          <Switcher toggleLanguage={toggleLanguage} currentLanguage={language} />
+        </Typography>
+        
       </ul>
 
       {/* desktop */}
@@ -183,7 +199,7 @@ const NavList = ({ closeMenu }) => {
             to="home"
             className="hover:text-purple ease-linear duration-100 cursor-pointer flex items-center font-poppins text-white font-semibold text-base transition-colors"
           >
-            Home
+            {translations.nav.home}
           </Link>
         </Typography>
 
@@ -200,7 +216,7 @@ const NavList = ({ closeMenu }) => {
             to="about"
             className="hover:text-purple ease-linear duration-100 cursor-pointer flex items-center font-poppins text-white font-semibold text-base transition-colors"
           >
-            About
+            {translations.nav.about}
           </Link>
         </Typography>
 
@@ -217,7 +233,7 @@ const NavList = ({ closeMenu }) => {
             to="work"
             className="hover:text-purple ease-linear duration-100 cursor-pointer flex items-center font-poppins text-white font-semibold text-base transition-colors"
           >
-            Projects
+            {translations.nav.proyects}
           </Link>
         </Typography>
 
@@ -234,8 +250,18 @@ const NavList = ({ closeMenu }) => {
             to="contact"
             className="hover:text-purple ease-linear duration-100 cursor-pointer flex items-center font-poppins text-white font-semibold text-base transition-colors"
           >
-            Contact
+            {translations.nav.contact}
           </Link>
+        </Typography>
+
+        {/* toggle */}
+
+        <Typography
+          as="li"
+          variant="small"
+          className="flex justify-end lg:pl-4 lg:py-3 pt-3 pb-4"
+        >
+          <Switcher toggleLanguage={toggleLanguage} currentLanguage={language} />
         </Typography>
       </ul>
     </>

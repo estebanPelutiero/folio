@@ -9,8 +9,12 @@ import { DiReact, DiJsBadge, DiGit } from "react-icons/di";
 import { SiTailwindcss } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
 import wave from "../assets/images/waving.png";
+import { useLanguage } from '../LanguageContext';
 
 const Hero = () => {
+
+const { translations } = useLanguage();
+
   return (
     <Layout id={"home"} className={"flex flex-col"}>
       <div className="h-fit lg:h-screen flex flex-col-reverse lg:flex-row lg:items-center justify-center pt-[5.5rem] lg:pt-14">
@@ -20,15 +24,15 @@ const Hero = () => {
               Front-end Developer
               <img
                 className="inline w-11 lg:w-14 mx-3 mb-2"
+                loading="lazy"
                 src={wave}
                 alt=""
               />
             </h1>
           </div>
 
-          <p className="text-white text-center lg:text-start text-base font-mulish mt-6 mb-10 leading-normal lg:w-[80%] tracking-wide">
-            Hi, I'm Esteban Pelutiero. A passionate Front-end Developer based in
-            Buenos Aires, Argentina 📍
+          <p className="text-white text-center lg:text-start text-base font-mulish mx-1 mt-6 mb-10 leading-normal lg:w-[90%] tracking-wide">
+            {translations.hero.description} 📍
           </p>
 
           <div className="w-full flex justify-center items-center lg:justify-start gap-5">
@@ -38,8 +42,8 @@ const Hero = () => {
               duration={1300}
               smooth={true}
             >
-              <Button className="btn py-4 px-8 capitalize text-base font-medium font-poppins rounded-full text-center">
-                Contact
+              <Button className="min-w-36 btn py-4 px-8 capitalize text-base font-medium font-poppins rounded-full text-center">
+                {translations.hero.btn}
               </Button>
             </Link>
             <IconButton
@@ -73,6 +77,7 @@ const Hero = () => {
           <img
             className="w-[80%] lg:w-[65%] morphBorder morph border-[2px] border-gray"
             src={perfil}
+            loading="lazy"
             alt="Esteban Pelutiero Portfolio | Frontend Developer"
           />
         </figure>
@@ -81,14 +86,14 @@ const Hero = () => {
       <div className="lg:w-2/3 lg:-mt-6 mt-20">
         <article className="flex flex-col lg:flex-row items-center gap-8">
           <h2 className=" text-purple text-xl font-poppins font-semibold uppercase text-center lg:text-start py-3 lg:pr-6 lg:py-1 border-white/50 border-y-[1px] lg:border-y-0 lg:border-r-[1px]">
-            Tech Stack
+            {translations.hero.tech}
           </h2>
           <div className="flex items-center gap-4 lg:gap-8">
-            <DiReact color="white" size={60} />
-            <SiTailwindcss color="white" size={55} />
-            <DiGit color="white" size={60} />
-            <DiJsBadge color="white" size={40} />
-            <FaFigma color="white" size={42} />
+            <DiReact className="cursor-pointer hover:-translate-y-1 duration-100 ease-in-out" title="React" color="white" size={60} />
+            <SiTailwindcss className="cursor-pointer hover:-translate-y-1 duration-100 ease-in-out" title="Tailwind" color="white" size={55} />
+            <DiGit className="cursor-pointer hover:-translate-y-1 duration-100 ease-in-out" title="Git" color="white" size={60} />
+            <DiJsBadge className="cursor-pointer hover:-translate-y-1 duration-100 ease-in-out" title="JavaScript" color="white" size={40} />
+            <FaFigma className="cursor-pointer hover:-translate-y-1 duration-100 ease-in-out" title="Figma" color="white" size={42} />
           </div>
         </article>
       </div>

@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mi",
+    "proyects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "description": "Hola, soy Esteban Pelutiero. Un apasionado Desarrollador Front-end formado en Buenos Aires, Argentina",
+    "btn": "contacto",
+    "tech": "tecnologias"
+  },
+  "about": {
+    "title": "Sobre mi",
+    "subtitle": "Desarrollador Front-end formado en Buenos Aires, Argentina",
+    "description": "Como Desarrollador Front-End Junior, poseo un gran arsenal de habilidades en HTML, CSS, JavaScript, React y Tailwind. Sobresalgo en el diseño y mantenimiento de sitios web que ofrecen una experiencia de usuario única. Tengo experiencia en la elaboración de interfaces dinámicas y atractivas a través de código limpio y optimizado. También soy un jugador de equipo, que disfruta de la colaboración con equipos multi-funcionales para producir aplicaciones web excepcionales."
+  },
+  "works": {
+    "subtitle": "Cada proyecto es una pieza única de desarrollo",
+    "textWork1": "Diseño que se centra en la simplicidad, una paleta de colores limpia y una navegación intuitiva. Imágenes, cuidadosamente seleccionadas, transmiten limpieza y profesionalidad. Full responsive, garantiza una experiencia de usuario fluida en cualquier dispositivo.",
+    "textWork2": "Diseño elegante para una agencia digital moderna. Enfatizando la estética contemporánea, muestra la innovación a través de imágenes atractivas y una navegación atrapante, comunicando profesionalidad y experiencia.",
+    "btnGit": "Código",
+    "btnVisit": "Visitar"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "No seas tímido, hablemos!",
+    "location": "Ubicación",
+    "copy": "Todos los derechos reservados"
+  }
+}

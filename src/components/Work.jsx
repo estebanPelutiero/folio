@@ -4,16 +4,20 @@ import Garden from "../assets/images/clean-garden.png";
 import Oss from "../assets/images/oss-web.png";
 import { FiGithub } from "react-icons/fi";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { useLanguage } from '../LanguageContext';
+
 
 const Work = () => {
+  const { translations } = useLanguage();
   return (
     <Layout id={"work"} className={"py-20"}>
+
       <div className="w-full mb-14">
         <h2 className="text-purple text-xl font-poppins font-semibold uppercase mb-4 text-center lg:text-start">
           Portfolio 👜
         </h2>
         <h3 className="text-2xl text-gray-50 font-poppins font-bold mb-6 text-center lg:text-start">
-          Each project is a unique piece of development 🧩
+          {translations.works.subtitle} 🧩
         </h3>
       </div>
 
@@ -29,13 +33,9 @@ const Work = () => {
                 </h3>
               </div>
 
-              <div className="lg:w-[80%] mb-6">
+              <div className="lg:w-[85%] mb-6">
                 <p className="">
-                  The design phase focuses on simplicity, employing a clean
-                  color palette and intuitive navigation. Imagery, carefully
-                  selected to resonate with cleanliness and professionalism,
-                  plays a pivotal role. A responsive layout ensures a seamless
-                  user experience across various devices.
+                  {translations.works.textWork1}
                 </p>
               </div>
 
@@ -48,7 +48,7 @@ const Work = () => {
                     rel="noopener noreferer"
                   >
                     <span className="bg-left-bottom bg-gradient-to-r from-purple to-purple bg-[length:0%_2px] bg-no-repeat group-hover/anchor:bg-[length:100%_2px] transition-all duration-300 ease-out pb-1">
-                      Code
+                      {translations.works.btnGit}
                     </span>{" "}
                     <FiGithub
                       className="group-hover/btn:-translate-y-0.5 ease-in-out duration-[200ms] mb-1"
@@ -65,7 +65,7 @@ const Work = () => {
                     rel="noopener noreferer"
                   >
                     <span className="bg-left-bottom bg-gradient-to-r from-purple to-purple bg-[length:0%_2px] bg-no-repeat group-hover/anchor:bg-[length:100%_2px] transition-all duration-300 ease-out pb-1">
-                      Visit
+                      {translations.works.btnVisit}
                     </span>{" "}
                     <MdOutlineKeyboardArrowRight
                       className="-mr-2 -ml-1 group-hover/btn:translate-x-0.5 ease-in-out duration-[200ms] mb-1"
@@ -81,6 +81,7 @@ const Work = () => {
           <figure className="lg:w-[53%] rounded-lg max-h-60 md:max-h-80 overflow-hidden">
             <img
               className="lg:group-hover:-translate-y-[84.9%] ease-in-out duration-[8000ms]"
+              loading="lazy"
               src={Garden}
               alt="Clean & Garden | Servicio de limpieza integral"
             />
@@ -98,12 +99,9 @@ const Work = () => {
                 </h3>
               </div>
 
-              <div className="lg:w-[80%] mb-6">
+              <div className="lg:w-[85%] mb-6">
                 <p className="">
-                  Designing a sleek landing page for a modern digital agency.
-                  Emphasizing contemporary aesthetics, it showcases innovation
-                  through engaging visuals and intuitive navigation,
-                  communicating professionalism and expertise.
+                {translations.works.textWork2}
                 </p>
               </div>
 
@@ -116,7 +114,7 @@ const Work = () => {
                     rel="noopener noreferer"
                   >
                     <span className="bg-left-bottom bg-gradient-to-r from-purple to-purple bg-[length:0%_2px] bg-no-repeat group-hover/anchor:bg-[length:100%_2px] transition-all duration-300 ease-out pb-1">
-                      Code
+                      {translations.works.btnGit}
                     </span>{" "}
                     <FiGithub
                       className="group-hover/btn:-translate-y-0.5 ease-in-out duration-[200ms] mb-1"
@@ -133,7 +131,7 @@ const Work = () => {
                     rel="noopener noreferer"
                   >
                     <span className="bg-left-bottom bg-gradient-to-r from-purple to-purple bg-[length:0%_2px] bg-no-repeat group-hover/anchor:bg-[length:100%_2px] transition-all duration-300 ease-out pb-1">
-                      Visit
+                    {translations.works.btnVisit}
                     </span>{" "}
                     <MdOutlineKeyboardArrowRight
                       className="-mr-2 -ml-1 group-hover/btn:translate-x-0.5 ease-in-out duration-[200ms] mb-1"
@@ -149,6 +147,7 @@ const Work = () => {
           <figure className="lg:w-[53%] rounded-lg max-h-60 md:max-h-80 overflow-hidden">
             <img
               className="lg:group-hover:-translate-y-[84.9%] ease-in-out duration-[8000ms]"
+              loading="lazy"
               src={Oss}
               alt="Clean & Garden | Servicio de limpieza integral"
             />
